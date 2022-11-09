@@ -8,12 +8,12 @@ public class DBUtil {
 	
 	public static Connection provideConnection() {
 		
+		
 		Connection conn = null;
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
@@ -22,10 +22,15 @@ public class DBUtil {
 		try {
 			conn = DriverManager.getConnection(url,"root","subham@1234");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
 		return conn;
+	}
+	public static void main(String[] args) {
+		
+		int i = 07;
+		System.out.println(i);
 	}
 }
