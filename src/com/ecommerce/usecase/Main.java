@@ -7,6 +7,7 @@ import com.ecommerce.bean.Customers;
 import com.ecommerce.dao.AdminDao;
 import com.ecommerce.dao.AdminDaoImpl;
 import com.ecommerce.exception.AdminException;
+import com.ecommerce.exception.SuppliersException;
 
 public class Main {
 
@@ -73,6 +74,35 @@ public class Main {
 				}
 
 			} else if (userType == 2) {
+
+				SupplierLoginUsecase.supplierLoginUsecase();
+
+				while (true) {
+
+					System.out.println("Enter 1 to Get All Customer Details");
+					System.out.println(
+							"Enter 2 to PrintTheAverageSalePriceAndTheAverageMarketPriceOfProductsProducedByTheBrand ");
+					System.out.println("Enter 3 to Print All Order Details");
+					System.out.println("Enter 4 to get all the city names of customers ");
+					System.out.println("Enter 5 to Print the top customers");
+
+					int supplier = sc.nextInt();
+					if (supplier == 1) {
+						SupplierGetAllCustomerDetails.supplierGetAllCustomerDetails();
+					} else if (supplier == 2) {
+						SupplierAverageSalePriceAndMarketPriceOfGivenBrand
+								.supplierAverageSalePriceAndMarketPriceOfGivenBrand();
+					} else if (supplier == 3) {
+						SupplierPrintOrderDetails.supplierPrintOrderDetails();
+					} else if (supplier == 4) {
+						SupplierGetAllCityNamesOfCustomers.supplierGetAllCityNamesOfCustomers();
+					} else if (supplier == 5) {
+						SupplierPrintTheTopCustomers.supplierPrintTheTopCustomers();
+					} else {
+						System.out.println("Invalid Input..........");
+					}
+
+				}
 
 			} else if (userType == 3) {
 

@@ -7,9 +7,9 @@ import com.ecommerce.exception.SuppliersException;
 
 public interface SuppliersDao {
 	
-	public void LoginAsSupplierBySupplierIdAndEmail() throws SuppliersException;
+	public void LoginAsSupplierBySupplierIdAndEmail(int supplierid,String email) throws SuppliersException;
 	
-	public List<Customers> getAllCustomerDetails();
+	public List<Customers> getAllCustomerDetails() throws SuppliersException;
 	
 	public void PrintTheAverageSalePriceAndTheAverageMarketPriceOfProductsProducedByTheBrand(String brand)throws SuppliersException;
 	
