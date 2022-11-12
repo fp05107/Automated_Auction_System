@@ -1,26 +1,28 @@
 package com.ecommerce.bean;
 
+import java.sql.Date;
+
 public class Customers {
 
 	
 	private int customerId;
 	private String firstName;
 	private String lastName;
-	private String date_Of_Birth;
+	private Date date_Of_Birth;
 	private String city;
 	private String state;
 	private String country;
 	private int postalCode;
 	private long phone;
 	private String email;
-	private String dateEntered;
+	private Date dateEntered;
 	
 	public Customers() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Customers(int customerId, String firstName, String lastName, String date_Of_Birth, String city, String state,
-			String country, int postalCode, long phone, String email, String dateEntered) {
+	public Customers(int customerId, String firstName, String lastName, Date date_Of_Birth, String city, String state,
+			String country, int postalCode, long phone, String email, Date dateEntered) {
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
@@ -67,11 +69,11 @@ public class Customers {
 		this.lastName = lastName;
 	}
 
-	public String getDate_Of_Birth() {
+	public Date getDate_Of_Birth() {
 		return date_Of_Birth;
 	}
 
-	public void setDate_Of_Birth(String date_Of_Birth) {
+	public void setDate_Of_Birth(Date date_Of_Birth) {
 		this.date_Of_Birth = date_Of_Birth;
 	}
 
@@ -123,11 +125,11 @@ public class Customers {
 		this.email = email;
 	}
 
-	public String getDateEntered() {
+	public Date getDateEntered() {
 		return dateEntered;
 	}
 
-	public void setDateEntered(String dateEntered) {
+	public void setDateEntered(Date dateEntered) {
 		this.dateEntered = dateEntered;
 	}
 	

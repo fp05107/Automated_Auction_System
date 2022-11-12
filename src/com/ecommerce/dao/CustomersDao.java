@@ -8,6 +8,7 @@ import com.ecommerce.bean.Products;
 
 public interface CustomersDao {
 	
+	
 	public List<Customers> loginCustomerUsingCustomeridAndPhone();
 	
 	public List<Products> showAllProducts();
@@ -15,6 +16,7 @@ public interface CustomersDao {
 	public Set<String> showAllBrands();
 	
 	public Set<String> showAllThePaymentTypeWhichAreAllowed();
+	
 	
 	
 }

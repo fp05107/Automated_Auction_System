@@ -9,29 +9,32 @@ import com.ecommerce.bean.Payments;
 import com.ecommerce.bean.Products;
 import com.ecommerce.bean.Shippers;
 import com.ecommerce.bean.Suppliers;
+import com.ecommerce.exception.AdminException;
 
 public interface AdminDao {
+	
+	public void loginAdminByPasswordAndAdminId(int adminid,long password) throws AdminException;
+	
+	public List<Customers> getAllCustomerDetails() throws AdminException;
 
-	public List<Customers> getAllCustomerDetails();
+	public List<Suppliers> getAllSupplierDetails() throws AdminException;
 
-	public List<Suppliers> getAllSupplierDetails();
+	public List<Products> getAllProductDetails() throws AdminException;
 
-	public List<Products> getAllProductDetails();
+	public List<Payments> getAllPaymentsType() throws AdminException;
 
-	public List<Payments> getAllPaymentsType();
+	public List<Orders> getAllOrdersDetail() throws AdminException;
 
-	public List<Orders> getAllOrdersDetail();
+	public List<Shippers> getAllShippersDetails() throws AdminException;
 
-	public List<Shippers> getAllShippersDetails();
+	public List<Category> getAllCategoryDetails() throws AdminException;
 
-	public List<Category> getAllCategoryDetails();
+	public void getAllDetailsOfOrdersPlacedIn(String date) throws AdminException;
 
-	public void getAllDetailsOfOrdersPlacedIn(String date);
+	public void printNoOfShippersPresent() throws AdminException;
 
-	public void printNoOfShippersPresent();
+	public List<Orders> getAllDetailsOfOrdersWhichWerePlaceUsingPaymentMethod(int paymentid) throws AdminException;
 
-	public List<Orders> getAllDetailsOfOrdersWhichWerePlaceUsingPaymentMethod(int paymentid);
-
-	public List<Customers> getAllDetailsOfCustomersWhosePhoneStartWith(int n);
+	public List<Customers> getAllDetailsOfCustomersWhosePhoneStartWith(int n) throws AdminException;
 
 }
