@@ -22,6 +22,7 @@ public class AdminLoginUsecase {
 			admindao.loginAdminByPasswordAndAdminId(adminId, password);
 		} catch (AdminException e1) {
 			e1.printStackTrace();
+			loginAdmin();
 		} finally {
 			System.out.println("==============================");
 		}

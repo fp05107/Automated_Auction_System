@@ -8,41 +8,36 @@ public class Customers {
 	private int customerId;
 	private String firstName;
 	private String lastName;
-	private Date date_Of_Birth;
 	private String city;
 	private String state;
 	private String country;
 	private int postalCode;
 	private long phone;
 	private String email;
-	private Date dateEntered;
 	
 	public Customers() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Customers(int customerId, String firstName, String lastName, Date date_Of_Birth, String city, String state,
-			String country, int postalCode, long phone, String email, Date dateEntered) {
+	public Customers(int customerId, String firstName, String lastName, String city, String state, String country,
+			int postalCode, long phone, String email) {
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.date_Of_Birth = date_Of_Birth;
 		this.city = city;
 		this.state = state;
 		this.country = country;
 		this.postalCode = postalCode;
 		this.phone = phone;
 		this.email = email;
-		this.dateEntered = dateEntered;
 	}
 
 	@Override
 	public String toString() {
-		return "Customers [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", date_Of_Birth=" + date_Of_Birth + ", city=" + city + ", state=" + state + ", country=" + country
-				+ ", postalCode=" + postalCode + ", phone=" + phone + ", email=" + email + ", dateEntered="
-				+ dateEntered + "]";
+		return "Customers [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName + ", city="
+				+ city + ", state=" + state + ", country=" + country + ", postalCode=" + postalCode + ", phone=" + phone
+				+ ", email=" + email + "]";
 	}
 
 	public int getCustomerId() {
@@ -67,14 +62,6 @@ public class Customers {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public Date getDate_Of_Birth() {
-		return date_Of_Birth;
-	}
-
-	public void setDate_Of_Birth(Date date_Of_Birth) {
-		this.date_Of_Birth = date_Of_Birth;
 	}
 
 	public String getCity() {
@@ -125,13 +112,7 @@ public class Customers {
 		this.email = email;
 	}
 
-	public Date getDateEntered() {
-		return dateEntered;
-	}
-
-	public void setDateEntered(Date dateEntered) {
-		this.dateEntered = dateEntered;
-	}
+	
 	
 	
 }

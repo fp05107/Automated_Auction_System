@@ -21,6 +21,7 @@ public class CustomerLoginUsecase {
 			dao.loginCustomerUsingCustomeridAndPhone(customerid, phone);
 		} catch (CustomersException e) {
 			e.printStackTrace();
+			customerLoginUsecase();
 		}
 		
 	}

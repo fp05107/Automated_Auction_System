@@ -105,6 +105,25 @@ public class Main {
 				}
 
 			} else if (userType == 3) {
+				CustomerLoginUsecase.customerLoginUsecase();
+
+				while (true) {
+					System.out.println("Enter 1 to show all Product details");
+					System.out.println("Enter 2 to show all brands");
+					System.out.println("Enter 3 to show all payment type which are allowed");
+
+					int customer = sc.nextInt();
+					if (customer == 1) {
+						CustomerShowAllProducts.customerShowAllProducts();
+					} else if (customer == 2) {
+						CustomerShowAllBrands.customerShowAllBrands();
+					} else if (customer == 3) {
+						CustomersShowAllPaymentTypeWhichAreAllowed.customersShowAllPaymentTypeWhichAreAllowed();
+					} else {
+						System.out.println("Invallid Input....");
+					}
+
+				}
 
 			} else if (userType == 4) {
 				try {

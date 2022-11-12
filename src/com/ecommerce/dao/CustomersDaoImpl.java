@@ -22,7 +22,7 @@ public class CustomersDaoImpl implements CustomersDao {
 
 		try (Connection conn = DBUtil.provideConnection()) {
 
-			PreparedStatement ps = conn.prepareStatement("select * from customers where customerid=?,phone=?");
+			PreparedStatement ps = conn.prepareStatement("select * from customers where customerid=? AND phone=?");
 			ps.setInt(1, customerid);
 			ps.setLong(2, phone);
 
@@ -119,3 +119,11 @@ public class CustomersDaoImpl implements CustomersDao {
 	}
 
 }
+
+
+
+
+
+
+
+

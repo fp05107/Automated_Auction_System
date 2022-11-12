@@ -36,17 +36,16 @@ public class AdminDaoImpl implements AdminDao {
 				int customerId = rs.getInt("customerid");
 				String firstName = rs.getString("firstname");
 				String lastName = rs.getString("lastname");
-				Date date_of_birth = rs.getDate("date_of_birth");
 				String city = rs.getString("city");
 				String state = rs.getString("state");
 				String country = rs.getString("country");
 				int postalcode = rs.getInt("postalcode");
 				long phone = rs.getLong("phone");
 				String email = rs.getString("email");
-				Date dateEntered = rs.getDate("dateentered");
+				
 
-				Customers c = new Customers(customerId, firstName, lastName, date_of_birth, city, state, country,
-						postalcode, phone, email, dateEntered);
+				Customers c = new Customers(customerId, firstName, lastName,  city, state, country,
+						postalcode, phone, email);
 				list.add(c);
 
 			}
@@ -308,17 +307,17 @@ public class AdminDaoImpl implements AdminDao {
 				int customerId = rs.getInt("customerid");
 				String firstName = rs.getString("firstname");
 				String lastName = rs.getString("lastname");
-				Date date_of_birth = rs.getDate("date_of_birth");
+				
 				String city = rs.getString("city");
 				String state = rs.getString("state");
 				String country = rs.getString("country");
 				int postalcode = rs.getInt("postalcode");
 				long phone = rs.getLong("phone");
 				String email = rs.getString("email");
-				Date dateEntered = rs.getDate("dateentered");
+				
 
-				Customers c = new Customers(customerId, firstName, lastName, date_of_birth, city, state, country,
-						postalcode, phone, email, dateEntered);
+				Customers c = new Customers(customerId, firstName, lastName, city, state, country,
+						postalcode, phone, email);
 				list.add(c);
 
 			}
@@ -348,12 +347,12 @@ public class AdminDaoImpl implements AdminDao {
 				System.out.println("Admin Login Successfully");
 			}
 			else {
-				System.out.println("Incorrect Details");
+				throw new AdminException("Invalid details");
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new AdminException();
+			throw new AdminException(e.getMessage());
 		}
 
 	}
